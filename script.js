@@ -7,23 +7,26 @@ function speak(text) {
   text_speak.rate = 1;
   text_speak.pitch = 1;
   text_speak.volume = 1;
-  text_speak.lang = "hi-GB";
+  text_speak.lang = "en-GB"; 
   window.speechSynthesis.speak(text_speak);
 }
 
-function wishMe() {
-  const day = new Date();
-  const hours = day.getHours();
-  if (hours >= 0 && hours < 12) {
-    speak("Good Morning Sir");
-  } else if (hours >= 12 && hours < 16) {
-    speak("Good Afternoon Sir");
-  } else {
-    speak("Good Evening my master");
-  }
-}
 
-window.addEventListener("load", wishMe);
+// function wishMe() {
+//   const day = new Date();
+//   const hours = day.getHours();
+//   if (hours >= 0 && hours < 12) {
+//     speak("Good Morning Sir");
+//   } else if (hours >= 12 && hours < 16) {
+//     speak("Good Afternoon Sir");
+//   } else {
+//     speak("Good Evening my master");
+//   }
+// }
+
+// window.addEventListener("load", wishMe);
+
+
 
 const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new speechRecognition();
