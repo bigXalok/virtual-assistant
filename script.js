@@ -12,19 +12,19 @@ function speak(text) {
 }
 
 
-// function wishMe() {
-//   const day = new Date();
-//   const hours = day.getHours();
-//   if (hours >= 0 && hours < 12) {
-//     speak("Good Morning Sir");
-//   } else if (hours >= 12 && hours < 16) {
-//     speak("Good Afternoon Sir");
-//   } else {
-//     speak("Good Evening my master");
-//   }
-// }
+function wishMe() {
+  const day = new Date();
+  const hours = day.getHours();
+  if (hours >= 0 && hours < 12) {
+    speak("Good Morning Sir");
+  } else if (hours >= 12 && hours < 16) {
+    speak("Good Afternoon Sir");
+  } else {
+    speak("Good Evening my master");
+  }
+}
 
-// window.addEventListener("load", wishMe);
+window.addEventListener("load", wishMe);
 
 
 
@@ -50,7 +50,7 @@ btn.addEventListener("click", () => {
 function takeCommand(message) {
   toggleUI(false);
 
-  if (message.includes("hello alina") || message.includes("hey alina")) {
+  if (message.includes("hello") || message.includes("hey")) {
     speak("Hello my master, what can I help you with?");
 
   } else if (message.includes("who are you")) {
